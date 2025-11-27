@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.container {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 .4rem;
+}
+
+label {
+    display: block;
+    margin: .5rem 0 .25rem;
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.radio-group span {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    margin-right: 1rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+#msg {
+    min-height: 1.1rem;
+    font-weight: 600;
+}

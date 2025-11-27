@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+
+</head>
+
+<body>
+    <main class="container">
+        <h1>Register my data</h1>
+        <form action="">
+            <fieldset>
+                <legend>Personal data</legend>
+                <!--Nombre completo-->
+                <label for="full-name">*Full name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Pepito Perez" required minlength="3"
+                    maxlength="80">
+
+                <!--email-->
+                <label for="email">*E-mail</label>
+                <input type="email" id="email" name="email" placeholder="user@mail.com" required>
+
+                <!--password-->
+                <label for="pass">*Password</label>
+                <input type="password" id="pass" name="pass" required minlength="6">
+
+                <!--age-->
+                <label for="age">*Age</label>
+                <input type="number" id="age" name="age" required min="18" max="120" step="1">
+
+                <!--Register date-->
+                <label for="reg-date">Register date</label>
+                <input type="date" id="reg-date" name="reg-date" required>
+
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <select name="rol" id="rol" required>
+                    <option value="">-- Choose one --</option>
+                    <option value="s">Student</option>
+                    <option value="t">Teacher</option>
+                    <option value="g">Guest</option>
+                </select>
+                <div class="radio-group">
+                    <br>
+                    <span>*Schedule</span>
+                    <label>
+                        <input type="radio" name="sch" value="m">
+                        Morning
+                    </label>
+                    <label>
+                        <input type="radio" name="sch" value="a">
+                        Afternoon
+                    </label>
+                    <label>
+                        <input type="radio" name="sch" value="n">
+                        Night
+                    </label>
+                </div>
+                <label for="tc">
+                    <input type="checkbox" name="tc" id="tc" required value="1" unchecked>
+                    I am agree
+                </label>
+                <label for="comments">Comments and more (optional)</label>
+                <textarea name="comments" id="comments" rows="30" placeholder="Write here"></textarea>
+            </fieldset>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <script src='main.js'></script>
+</body>
+
+</html>
