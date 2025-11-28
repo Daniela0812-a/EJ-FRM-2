@@ -13,7 +13,7 @@
 <body>
     <main class="container">
         <h1>Register my data</h1>
-        <form action="">
+        <form action="./server/save.php" method="POST">
             <fieldset>
                 <legend>Personal data</legend>
                 <!--Nombre completo-->
@@ -67,7 +67,7 @@
                     I am agree
                 </label>
                 <label for="comments">Comments and more (optional)</label>
-                <textarea name="comments" id="comments" rows="30" placeholder="Write here"></textarea>
+                <textarea name="comments" id="comments" rows="10" placeholder="Write here"></textarea>
             </fieldset>
 
             <button type="submit">Send</button>

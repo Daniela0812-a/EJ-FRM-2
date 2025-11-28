@@ -1,20 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hola mundo desde PHP </h1>
-    <?php
-        $a = 100;
-        $b = 2;
-        $c = $a * $b;
-        for ($i=0; $i < $c; $i++){
-        echo '<h> Hola mundo desde PHP'.$c. '</h1>';
-        }
-    ?>
+<?php
+require './utils/db.php';
+$fn = $_POST['full-name'];
 
-</body>
-</html>
+try {
+    $q = "INSERT INTO public.person(full_name)VALUES (:fn);";
+    $stmt = $pdo->prepare($q);
+    $stmt->execute(["fn" => $fn]);
+    echo json_encode(
+        [
+            "success" => true,
+            "message" => "Created O.K."
+        ]
+    );
+
+} catch (PDOException $e) {
+    echo json_encode(
+        [
+            "success" => false,
+            "message" => $e->getMessage()
+        ]
+    );
+}
+
+?>
